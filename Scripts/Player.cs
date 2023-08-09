@@ -173,7 +173,7 @@ public class Player : MonoBehaviour {
     }
 
     private void Jump() {
-        rb.velocity = new Vector2 (rb.velocity.x, (Vector2.up * JumpForce).y);
+        rb.velocity = new Vector2 (0, (Vector2.up * JumpForce).y);
     }
 
 
@@ -187,7 +187,7 @@ public class Player : MonoBehaviour {
         }
 
         anim.SetFloat("Y_velocity", rb.velocity.y);
-        // anim.SetBool("isWallSliding", isWallSliding);
+        anim.SetBool("isWallSliding", isWallSliding);
         anim.SetBool("isGrounded", _isGrounded);
         // anim.SetBool("isKnokedback", isKnokedback);
     }
