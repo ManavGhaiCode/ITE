@@ -181,9 +181,9 @@ public class Player : MonoBehaviour {
 
     private void AnimController() {
         if (moveInput != 0) {
-            // anim.SetBool("isRunning", true);
+            anim.SetBool("isRunning", true);
         } else {
-            // anim.SetBool("isRunning", false);
+            anim.SetBool("isRunning", false);
         }
 
         anim.SetFloat("Y_velocity", rb.velocity.y);
