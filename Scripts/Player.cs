@@ -114,9 +114,10 @@ public class Player : MonoBehaviour {
 
     private void TakeInput() {
         moveInput = Input.GetAxis("Horizontal");
-        isJumping = Input.GetKeyDown("z");
+        isJumping = Input.GetKeyDown(KeyCode.Space);
 
-        isWallSliding = canWallSlide && Input.GetKey("x");
+        float _isWallSliding = Input.GetAxisRaw("Vertical");
+        isWallSliding = canWallSlide && (_isWallSliding < 0);
     }
 
     private void CollisionCheck() {
