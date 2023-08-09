@@ -82,13 +82,13 @@ public class Player : MonoBehaviour {
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
-        // anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
 
         ExtraJumps = _ExtraJumps;
     }
 
     private void Update() {
-        // AnimController();
+        AnimController();
 
         if (isKnokedback)
             return;
@@ -181,15 +181,15 @@ public class Player : MonoBehaviour {
 
     private void AnimController() {
         if (moveInput != 0) {
-            anim.SetBool("isRunning", true);
+            // anim.SetBool("isRunning", true);
         } else {
-            anim.SetBool("isRunning", false);
+            // anim.SetBool("isRunning", false);
         }
 
-        anim.SetFloat("Y_velocity", Mathf.Clamp(rb.velocity.y, -1, 1));
-        anim.SetBool("isWallSliding", isWallSliding);
+        anim.SetFloat("Y_velocity", rb.velocity.y);
+        // anim.SetBool("isWallSliding", isWallSliding);
         anim.SetBool("isGrounded", _isGrounded);
-        anim.SetBool("isKnokedback", isKnokedback);
+        // anim.SetBool("isKnokedback", isKnokedback);
     }
 
     // * Flipping
