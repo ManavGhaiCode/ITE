@@ -16,6 +16,8 @@ public class Weapon : MonoBehaviour {
     private GameObject Player;
     private Transform PlayerTransform;
 
+    [SerializeField] private Vector2 Ofset;
+
     private void Start() {
         _TimeBetweenShots = TimeBetweenShots;
         TimeToShoot = Time.time + _TimeBetweenShots;
@@ -27,7 +29,16 @@ public class Weapon : MonoBehaviour {
 
     private void Update() {
         isShooting = Input.GetMouseButton(0);
-        transform.position = PlayerTransform.position;
+
+        int XPMP = 0;
+
+        if (0 < PlayerTransform.position.x - Camera.main.ScreenToWorldPoint(Input.mousePosition).x) {
+            XPMP = -1;
+        } else {
+            XPMP = 1;
+        }
+
+        transform.position = (Vector2)PlayerTransform.position + (Ofset * XPMP);
     }
 
     private void FixedUpdate() {

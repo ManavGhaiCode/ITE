@@ -255,4 +255,8 @@ public class Player : MonoBehaviour {
 
         weapon = Instantiate(WeaponRef, transform.position, Quaternion.identity);
     }
+
+    public int GetFacingDir() {
+        return FacingDir;
+    }
 }
