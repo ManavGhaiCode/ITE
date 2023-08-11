@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4171216478626532627}
   - component: {fileID: 4171216478626532624}
   - component: {fileID: -1569267690043889144}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: M15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,6 +105,7 @@ MonoBehaviour:
   TimeBetweenShots: 0.2
   BulletPrefab: {fileID: 6442387456585105882, guid: b7f3174907a58083f97811216e749326, type: 3}
   firePoint: {fileID: 4171216480232326552}
+  Ofset: {x: 0, y: 0}
 --- !u!50 &-1569267690043889144
 Rigidbody2D:
   serializedVersion: 4
@@ -135,7 +136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4171216480232326552}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}

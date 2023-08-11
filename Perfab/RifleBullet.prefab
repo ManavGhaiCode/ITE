@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 370631479136503974}
   - component: {fileID: 4206385347744532294}
   - component: {fileID: 6396819405728884125}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RifleBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}

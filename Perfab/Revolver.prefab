@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1243034917888999070}
   - component: {fileID: 1243034917888999069}
   - component: {fileID: 1243034917888999071}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Revolver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1243034919043516332}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
