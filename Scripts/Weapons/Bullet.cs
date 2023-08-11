@@ -16,7 +16,8 @@ public class Bullet : MonoBehaviour {
     }
 
     private void DestroyBullet() {
-        Instantiate(BulletHitEffect, transform.position, Quaternion.identity);
+        GameObject Effect = Instantiate(BulletHitEffect, transform.position, Quaternion.identity);
+        Effect.transform.localScale = new Vector3 (.7f, .7f, .7f);
         Destroy(gameObject);
     }
 }
