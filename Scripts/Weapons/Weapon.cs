@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Gun : MonoBehaviour {
+public class Weapon : MonoBehaviour {
     public int bulletDamage = 5;
     public float bulletSpeed = 10f;
     public float bulletLifespan = 1f;
