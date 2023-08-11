@@ -148,3 +148,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 0
   lifespan: 0
+  BulletHitEffect: {fileID: 3182980707210237339, guid: 21f4474c07dabecd78c02ac680fff251, type: 3}

@@ -4,6 +4,8 @@ public class Bullet : MonoBehaviour {
     public int Damage = 0;
     public float lifespan;
 
+    [SerializeField] protected GameObject BulletHitEffect;
+
     private void Start() {
         Invoke("DestroyBullet", lifespan);
     }
@@ -14,6 +16,7 @@ public class Bullet : MonoBehaviour {
     }
 
     private void DestroyBullet() {
+        Instantiate(BulletHitEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }
