@@ -21072,7 +21072,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4171216478626532624, guid: 578e5c277d124d2e0acd08fb5660d010, type: 3}
       propertyPath: TimeBetweenShots
-      value: 0.3
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4171216478626532625, guid: 578e5c277d124d2e0acd08fb5660d010, type: 3}
       propertyPath: m_RootOrder
