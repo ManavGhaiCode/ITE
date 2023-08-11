@@ -100,8 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletDamage: 5
-  bulletSpeed: 10
-  bulletLifespan: 1
+  bulletSpeed: 13
+  bulletLifespan: 0.6
   TimeBetweenShots: 0.2
   BulletPrefab: {fileID: 6442387456585105882, guid: b7f3174907a58083f97811216e749326, type: 3}
   firePoint: {fileID: 4171216480232326552}
