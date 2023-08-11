@@ -51,6 +51,7 @@ public class Player : MonoBehaviour {
     private bool isWallDetected;
     private bool isFacingRight = true;
     private int FacingDir = 1;
+    private GameObject weapon;
 
     [SerializeField] private float coyoteTime = .2f;
 
@@ -245,5 +246,13 @@ public class Player : MonoBehaviour {
             Invoke("UnKnockBack", .34f);
             Invoke("ResetCanKnockBack", 1.5f);
         }
+    }
+
+    public void TakeWeapon(GameObject WeaponRef) {
+        if (weapon != null) {
+            Destroy(weapon);
+        }
+
+        weapon = Instantiate(WeaponRef, transform.position, Quaternion.identity);
     }
 }
