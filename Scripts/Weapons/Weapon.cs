@@ -12,20 +12,31 @@ public class Weapon : MonoBehaviour {
     private float TimeToShoot;
     private bool isShooting = false;
 
+    private Rigidbody2D rb;
     private GameObject Player;
+    private Transform PlayerTransform;
 
     private void Start() {
         _TimeBetweenShots = TimeBetweenShots;
         TimeToShoot = Time.time + _TimeBetweenShots;
 
         Player = GameObject.FindGameObjectWithTag("Player");
+        PlayerTransform = Player.GetComponent<Transform>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update() {
         isShooting = Input.GetMouseButton(0);
+        transform.position = PlayerTransform.position;
     }
 
     private void FixedUpdate() {
+        Vector2 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 Dir = MousePos - (Vector2)PlayerTransform.position;
+
+        float angle = Mathf.Atan2(Dir.y, Dir.x) * Mathf.Rad2Deg;
+        rb.rotation = angle;
+
         if (isShooting && Time.time >= TimeToShoot) {
             TimeToShoot = Time.time + _TimeBetweenShots;
 
