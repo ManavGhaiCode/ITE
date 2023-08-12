@@ -197,7 +197,7 @@ MonoBehaviour:
   speed: 5
   JumpForce: 17.5
   _ExtraJumps: 1
-  KnockDir: {x: 5, y: 10}
+  KnockDir: {x: 5, y: 12.5}
   coyoteTime: 0.2
   GroundCheck: {fileID: 784880795}
   Ground:
@@ -4397,16 +4397,6 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 31
       m_TileSpriteIndex: 15
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 11, y: -2, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 30
-      m_TileSpriteIndex: 14
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -9534,7 +9524,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: b86e9ab72e6d258f8bf2bbc1cccf727f, type: 2}
   - m_RefCount: 55
     m_Data: {fileID: 11400000, guid: 5380f2a6f6a64904a95dcfeedb7c51e0, type: 2}
-  - m_RefCount: 55
+  - m_RefCount: 54
     m_Data: {fileID: 11400000, guid: 083934e533375e25bb1dbf6eb877117c, type: 2}
   - m_RefCount: 60
     m_Data: {fileID: 11400000, guid: 9f4bd420581f9480b9354bfa7846a6d7, type: 2}
@@ -9567,7 +9557,7 @@ Tilemap:
     m_Data: {fileID: 1456561260, guid: 11e92837b46059117937d3553a225ef5, type: 3}
   - m_RefCount: 55
     m_Data: {fileID: 1365833126, guid: 11e92837b46059117937d3553a225ef5, type: 3}
-  - m_RefCount: 55
+  - m_RefCount: 54
     m_Data: {fileID: -1732960861, guid: 11e92837b46059117937d3553a225ef5, type: 3}
   - m_RefCount: 60
     m_Data: {fileID: -1194958267, guid: 11e92837b46059117937d3553a225ef5, type: 3}
@@ -9604,7 +9594,7 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   m_TileMatrixArray:
-  - m_RefCount: 900
+  - m_RefCount: 899
     m_Data:
       e00: 1
       e01: 0
@@ -9641,7 +9631,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 900
+  - m_RefCount: 899
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -9741,7 +9731,6 @@ GameObject:
   - component: {fileID: 1013504730}
   - component: {fileID: 1013504728}
   - component: {fileID: 1013504727}
-  - component: {fileID: 1013504733}
   - component: {fileID: 1013504732}
   m_Layer: 0
   m_Name: WalkingEnemy
@@ -9878,36 +9867,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   Heath: 20
+  Damage: 1
   WallCheckDistace: 2
   Ground:
     serializedVersion: 2
     m_Bits: 64
---- !u!61 &1013504733
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1013504726}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.1, y: 2}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.1, y: 2}
-  m_EdgeRadius: 0
 --- !u!1001 &1312008349
 PrefabInstance:
   m_ObjectHideFlags: 0

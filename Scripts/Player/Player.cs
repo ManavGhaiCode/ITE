@@ -52,6 +52,7 @@ public class Player : MonoBehaviour {
     private bool isFacingRight = true;
     private int FacingDir = 1;
     private GameObject weapon;
+    private int Heath = 3;
 
     [SerializeField] private float coyoteTime = .2f;
 
@@ -254,6 +255,14 @@ public class Player : MonoBehaviour {
         }
 
         weapon = Instantiate(WeaponRef, transform.position, Quaternion.identity);
+    }
+
+    public void TakeDamage(int Damage) {
+        Heath -= Damage;
+
+        if (Heath <= 0) {
+            Destroy(gameObject);
+        }
     }
 
     public int GetFacingDir() {
