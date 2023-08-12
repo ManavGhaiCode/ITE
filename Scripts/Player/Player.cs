@@ -38,6 +38,12 @@ public class Player : MonoBehaviour {
 
     // * </Knockback>
 
+    // * <Damage>
+
+    private bool canTakeDamage = true;
+
+    // * <Damage>
+
     // * <WallSliding>
 
     private bool wasWallSliding = false;
@@ -233,6 +239,10 @@ public class Player : MonoBehaviour {
         canKnokedback = true;
     }
 
+    private void ResetCanTakeDamage() {
+        canTakeDamage = true;
+    }
+
     // * KnockBack
 
     public void Knockback(int dir) {
@@ -258,10 +268,15 @@ public class Player : MonoBehaviour {
     }
 
     public void TakeDamage(int Damage) {
-        Heath -= Damage;
+        if (canTakeDamage) {
+            Heath -= Damage;
 
-        if (Heath <= 0) {
-            Destroy(gameObject);
+            if (Heath <= 0) {
+                Destroy(gameObject);
+            }
+
+            canTakeDamage = false;
+            Invoke("ResetCanTakeDamage", 1.5f);
         }
     }
 
