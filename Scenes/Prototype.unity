@@ -197,7 +197,7 @@ MonoBehaviour:
   speed: 5
   JumpForce: 17.5
   _ExtraJumps: 1
-  KnockDir: {x: 5, y: 12.5}
+  KnockDir: {x: 5, y: 20}
   coyoteTime: 0.2
   GroundCheck: {fileID: 784880795}
   Ground:
